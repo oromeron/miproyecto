@@ -1,159 +1,276 @@
+```html id="e9ul0x"
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristian David Alcocer Quingue</title>
 
-<title>Osman Jahir | Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
+    <style>
 
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#0f172a;
-    color:white;
-}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
 
-/* HEADER */
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 50px;
-    background:#111827;
-}
+        body{
+            background:#0f172a;
+            color:white;
+            overflow-x:hidden;
+        }
 
-header h1{
-    font-size:20px;
-    color:#38bdf8;
-}
+        header{
+            width:100%;
+            min-height:100vh;
+            background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:40px;
+        }
 
-/* HERO */
-.hero{
-    height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c');
-    background-size:cover;
-    background-position:center;
-}
+        .hero{
+            max-width:900px;
+            animation:fadeIn 1.5s ease;
+        }
 
-.hero h2{
-    font-size:55px;
-    margin:0;
-    color:#38bdf8;
-}
+        .hero img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            border:5px solid white;
+            object-fit:cover;
+            margin-bottom:25px;
+            box-shadow:0 0 25px rgba(255,255,255,0.3);
+        }
 
-.hero p{
-    font-size:20px;
-    width:60%;
-    color:#d1d5db;
-}
+        h1{
+            font-size:60px;
+            margin-bottom:15px;
+            font-weight:700;
+        }
 
-.btn{
-    margin-top:20px;
-    padding:15px 30px;
-    background:#38bdf8;
-    color:black;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
-}
+        .highlight{
+            color:#38bdf8;
+        }
 
-/* SECTIONS */
-.section{
-    padding:60px 20px;
-    text-align:center;
-}
+        h2{
+            font-size:28px;
+            font-weight:300;
+            margin-bottom:25px;
+        }
 
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
+        p{
+            font-size:18px;
+            line-height:1.8;
+            color:#dbeafe;
+            margin-bottom:35px;
+        }
 
-.card{
-    background:#1f2937;
-    width:250px;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 0 15px rgba(56,189,248,0.3);
-}
+        .buttons{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+        }
 
-.card h3{
-    color:#38bdf8;
-}
+        .btn{
+            padding:15px 35px;
+            border-radius:50px;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:600;
+            transition:0.3s;
+        }
 
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    background:#111827;
-    color:#9ca3af;
-}
+        .btn-primary{
+            background:#38bdf8;
+            color:white;
+        }
 
-</style>
+        .btn-primary:hover{
+            background:#0ea5e9;
+            transform:translateY(-5px);
+        }
 
+        .btn-secondary{
+            border:2px solid white;
+            color:white;
+        }
+
+        .btn-secondary:hover{
+            background:white;
+            color:#0f172a;
+            transform:translateY(-5px);
+        }
+
+        section{
+            padding:80px 10%;
+        }
+
+        .skills{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+            margin-top:40px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:30px;
+            border-radius:20px;
+            transition:0.3s;
+            box-shadow:0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+            background:#2563eb;
+        }
+
+        .card h3{
+            margin-bottom:15px;
+            color:#38bdf8;
+        }
+
+        .contact{
+            text-align:center;
+            background:#111827;
+        }
+
+        footer{
+            text-align:center;
+            padding:25px;
+            background:#020617;
+            color:#94a3b8;
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(40px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        @media(max-width:768px){
+
+            h1{
+                font-size:40px;
+            }
+
+            h2{
+                font-size:22px;
+            }
+
+            p{
+                font-size:16px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Osman Jahir</h1>
-    <nav>
-        <a href="#" style="color:white; margin-right:15px;">Inicio</a>
-        <a href="#" style="color:white; margin-right:15px;">Sobre mí</a>
-        <a href="#" style="color:white;">Contacto</a>
-    </nav>
-</header>
+    <header>
 
-<section class="hero">
+        <div class="hero">
 
-    <h2>Osman Jahir Romero Naranjo</h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="perfil">
 
-    <p>
-        Desarrollador en formación apasionado por la tecnología,
-        el diseño web y la programación con Python y Django.
-    </p>
+            <h1>
+                Cristian David
+                <span class="highlight">Alcocer Quingue</span>
+            </h1>
 
-    <a href="#" class="btn">Ver proyectos</a>
+            <h2>
+                Desarrollador Web | Python | Django
+            </h2>
 
-</section>
+            <p>
+                Apasionado por el desarrollo web, la programación y la creación
+                de proyectos modernos con tecnologías como Python, Django,
+                HTML, CSS y JavaScript.
+            </p>
 
-<section class="section">
+            <div class="buttons">
+                <a href="#" class="btn btn-primary">Ver Proyectos</a>
 
-    <h2>Mis habilidades</h2>
+                <a href="#" class="btn btn-secondary">Contactar</a>
+            </div>
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>Python</h3>
-            <p>Desarrollo backend y lógica de programación.</p>
         </div>
 
-        <div class="card">
-            <h3>Django</h3>
-            <p>Creación de páginas web dinámicas.</p>
+    </header>
+
+    <section>
+
+        <h1 style="text-align:center;">
+            Mis Habilidades
+        </h1>
+
+        <div class="skills">
+
+            <div class="card">
+                <h3>Python</h3>
+                <p>
+                    Desarrollo de aplicaciones modernas y automatización.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Django</h3>
+                <p>
+                    Creación de aplicaciones web profesionales y escalables.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>HTML & CSS</h3>
+                <p>
+                    Interfaces modernas, responsivas y atractivas.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>
+                    Interactividad y experiencias dinámicas para usuarios.
+                </p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>HTML & CSS</h3>
-            <p>Diseño de interfaces modernas.</p>
-        </div>
+    </section>
 
-    </div>
+    <section class="contact">
 
-</section>
+        <h1>Contacto</h1>
 
-<footer>
-    © 2026 Osman Jahir Romero Naranjo - Todos los derechos reservados
-</footer>
+        <p style="margin-top:20px;">
+            Puedes conectar conmigo para proyectos, trabajos o colaboraciones.
+        </p>
+
+        <a href="#" class="btn btn-primary">
+            Enviar Mensaje
+        </a>
+
+    </section>
+
+    <footer>
+        © 2026 - Cristian David Alcocer Quingue
+    </footer>
 
 </body>
 </html>
+```
